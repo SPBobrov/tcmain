@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body, /*сброс прудустановленных в браузере стилей*/
+body,
 h1,
 h2,
 h3,
@@ -12,17 +12,17 @@ p {
 }
 
 body {
-    font-family: "Roboto Condensed", sans-serif, Arial, sans-serif; /*попробуем шрифт вызвать локально, не скачивая из сети*/
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f5f5f5;
+      font-family: "Roboto Condensed", sans-serif, NotoSansCJK-Bold, Ubuntu, Arial, sans-serif; /*попробуем шрифт вызвать локально, не скачивая из сети*/
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
 }
 
 nav {
   display: flex;
-  justify-content: space-between; /*justify-content: space-between; — это CSS-свойство для Flexbox (и Grid) контейнеров, которое управляет распределением дочерних элементов вдоль главной оси (обычно горизонтальной, если flex-direction: row).*/
-  align-items: baseline; /*Выравнивает элементы по их базовой линии текста (baseline), а не по границам контейнеров или элементам.*/
+  justify-content: space-between;
+  align-items: baseline;
   padding: 20px 40px;
 
 }
@@ -51,39 +51,36 @@ h1 {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     letter-spacing: 2px; /*расстояние между символами в цитате установили*/
     line-height: 1.5; /*межстрочное расстояние*/
-       
+    
+
+    
 }
 
 .main {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 600px;
 }
 
 .form {
     display: flex; /*тоже к флекс-контейнеру имеет отношение*/
-   
     
 }
-
-.content {
-    display: flex; /*флекс контейнер создали*/
-    margin: auto; /*расположили по центру*/
-    /*flex-direction: row-reverse; выстраивает содержимое в обратном порядке*/
-    /*flex-direction: column; выстраивает содержимое content по вертикали */
-    /*justify-content: space-between;*/
-    justify-content: space-evenly;
-   }
-
 
 .card {
   /*display: inline-block;*/
   margin: 3px;
-  border: 1px dotted black;
-  border-radius: 4px;
-  padding: 2px;
 }
+
+
+.content {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex; /*флекс контейнер создали*/
+    margin: auto; /*расположили по центру*/
+   
+}
+
 
 .about {
     background: white;
@@ -92,9 +89,29 @@ h1 {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     margin: auto;
     max-width: 100%;
-   
+    position: relative;
+    
+    
+    
+    /*margin: auto;*/
 }
-
+/*
+.about p {
+  line-height: 1.5; межстрочное расстояние
+  font-size: 18px;
+  margin: 10px;
+  overflow-wrap: break-word; перенос строк 
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; измени это число на нужное количество строк 
+  -webkit-box-orient: vertical;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+ 
+  
+}
+*/
 .truncated-text {
     line-height: 1.5;
     font-size: 18px;
@@ -108,7 +125,19 @@ h1 {
     transition: max-height 0.3s ease;
 }
 
-
+/* Градиент для плавного обрезания (опционально) 
+.truncated-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background: linear-gradient(to bottom, transparent, white);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+*/
 /* Класс для развернутого текста */
 .truncated-text.expanded {
     max-height: 1000px; /* достаточно большое значение */
@@ -182,5 +211,18 @@ h1 {
   text-align: center;
 }
 
+main ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px; /*между ячейкам расстояние определяет*/
+  list-style: none;
+}
+
+main ul li {
+  border: 1px dotted black;
+  border-radius: 4px;
+  padding: 0;
+  overflow: hidden;
+}
 
 
