@@ -1,0 +1,54 @@
+# Игнорируем директорию с модулями npm
+node_modules/
+
+# Игнорируем файлы логов
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Игнорируем файлы конфигурации IDE
+.idea/
+*.iml
+.vscode/
+
+# Игнорируем временные файлы
+*.tmp
+*.temp
+
+# Игнорируем файлы сборки
+dist/
+build/
+coverage/
+
+# Игнорируем файлы с секретными данными
+.env
+.env.local
+
+# Игнорируем файлы отладки
+app-cov/
+coverage.html
+
+# Игнорируем файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Игнорируем файлы документации
+docs/
+
+# Игнорируем файлы тестирования
+test-reports/
+
+# Игнорируем файлы от nodemon
+nodemon.json
+nodemon-debug.log
+
+# Игнорируем файлы от ESLint и Prettier
+.eslintcache
+.prettierignore
+
+# Игнорируем файлы от Jest
+jest.config.js.snap
+
+

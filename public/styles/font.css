@@ -1,0 +1,46 @@
+/*Подключение шрифтов*/
+@font-face {
+  font-family: NotoSansCJK-Bold;
+  src: local('NotoSansCJK-Bold');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url(https://pictures.s3.yandex.net/fonts/Ibmplexserif.woff2);
+  font-weight: normal;
+}
+
+@font-face {
+  
+  font-family: 'IBM Plex Serif';
+  src: url(https://pictures.s3.yandex.net/fonts/Ibmplexserifsemibold.woff2);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: local('Ubuntu'); /*попробуем шрифт вызвать локально, не скачивая из сети*/
+  src: local('ubuntu');
+  src: url(https://pictures.s3.yandex.net/fonts/ubuntu.woff2);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(https://pictures.s3.yandex.net/fonts/ubuntubold.woff2);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Istok Web';
+  src: url(https://pictures.s3.yandex.net/fonts/istokregular.woff2);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Istok Web';
+  src: url(https://pictures.s3.yandex.net/fonts/istokbold.woff2);
+  font-weight: bold;
+}

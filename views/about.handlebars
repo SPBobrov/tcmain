@@ -1,0 +1,35 @@
+<main class="about">
+    <h1>О проекте</h1>
+<p class="truncated-text"> 
+    Проект задуман, как приложение для повышения эффективности использования личного и рабочего времени. Проект имеет свободную лицензию.
+    В дальнейшем планируется разработка мобильного компонента системы. Кроме того будет дополнена функциональность наиболее востребованными 
+    элементами тайм-менеджмента и им подобными. Есть также собственные разработки в области учета и личной эффективности, которые будут 
+    интегрированы по мере развития приложения. По всем вопросам обращаться на почту. С наилучшими пожеланиями. 
+    <br />
+    PS: Проект всегда будет бесплатным. Если когда-нибудь он станет платным, первые 3000 зарегистрированных пользователей получат пожизненный промо-код. 
+    Пока (и, возможно, так будет всегда) помочь развитию приложения можно любым донатом.
+</p>
+
+<button class="read-more-btn">Читать далее</button>
+
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    const textElement = document.querySelector('.truncated-text');
+    
+    if (readMoreBtn && textElement) {
+        readMoreBtn.addEventListener('click', function() {
+            // Переключаем класс expanded
+            textElement.classList.toggle('expanded');
+            
+            // Меняем текст кнопки
+            if (textElement.classList.contains('expanded')) {
+                readMoreBtn.textContent = 'Скрыть';
+            } else {
+                readMoreBtn.textContent = 'Читать далее';
+            }
+        });
+    }
+});
+</script>

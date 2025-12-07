@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+body {
+      font-family: "Roboto Condensed", sans-serif, NotoSansCJK-Bold, Ubuntu, Arial, sans-serif; /*попробуем шрифт вызвать локально, не скачивая из сети*/
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 40px;
+
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 23px;
+}
+.quote {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    letter-spacing: 2px; /*расстояние между символами в цитате установили*/
+    line-height: 1.5; /*межстрочное расстояние*/
+    
+
+    
+}
+
+.main {
+    width: 600px;
+}
+
+.form {
+    display: flex;
+    
+}
+
+.card {
+  /*display: inline-block;*/
+  margin: 3px;
+}
+
+
+.content {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    margin: auto;
+   
+}
+
+
+.about {
+    background: white;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+    
+    
+    
+    /*margin: auto;*/
+}
+/*
+.about p {
+  line-height: 1.5; межстрочное расстояние
+  font-size: 18px;
+  margin: 10px;
+  overflow-wrap: break-word; перенос строк 
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; измени это число на нужное количество строк 
+  -webkit-box-orient: vertical;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+ 
+  
+}
+*/
+.truncated-text {
+    line-height: 1.5;
+    font-size: 18px;
+    margin: 10px;
+    overflow-wrap: break-word;
+    
+    /* Ограничиваем высоту и скрываем остаток */
+    max-height: 4.5em; /* примерно 3 строки (1.5 * 3) */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+}
+
+/* Градиент для плавного обрезания (опционально) 
+.truncated-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background: linear-gradient(to bottom, transparent, white);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+*/
+/* Класс для развернутого текста */
+.truncated-text.expanded {
+    max-height: 1000px; /* достаточно большое значение */
+}
+
+.truncated-text.expanded::after {
+    opacity: 0;
+}
+
+/* Стили для кнопки */
+.read-more-btn {
+    display: inline-block;
+    background: #5f0dee;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background: #3a5a8a;
+}
+
+.read-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.3);
+}
+
+.buttonpanel {
+    background-color: #5f0dee;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+
+.buttonpanel a {
+     color: white;
+     font-size: 18px;
+     text-decoration: none;
+     
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+.footer {
+  
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background-color: #5f0dee;
+  padding: 20px 40px;
+}
+
+.footer-author {
+  margin: auto;
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px; /*между ячейкам расстояние определяет*/
+  list-style: none;
+}
+
+main ul li {
+  border: 1px dotted black;
+  border-radius: 4px;
+  padding: 0;
+  overflow: hidden;
+}
+
+

@@ -1,0 +1,31 @@
+{
+  "name": "tcmain",
+  "version": "1.0.0",
+  "description": "Time tracking and control application",
+  "keywords": [
+    "time",
+    "count",
+    "javascript",
+    "npm",
+    "node"
+  ],
+  "homepage": "https://github.com/SPBobrov/tcmain#readme",
+  "bugs": {
+    "url": "https://github.com/SPBobrov/tcmain/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPBobrov/tcmain.git"
+  },
+  "license": "MIT",
+  "author": "Sergey Bobrov",
+  "type": "commonjs",
+  "main": "tCMain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.0",
+    "express-handlebars": "^8.0.4"
+  }
+}
