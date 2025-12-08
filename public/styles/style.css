@@ -74,6 +74,7 @@ h1 {
     /*flex-direction: column; выстраивает содержимое content по вертикали */
     /*justify-content: space-between;*/
     justify-content: space-evenly;
+    flex-wrap: wrap;
    }
 
 

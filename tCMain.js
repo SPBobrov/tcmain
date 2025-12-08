@@ -1,14 +1,9 @@
+const quote = require('./lib/quote')
 const express = require('express')
 //const expressHandlebars = require('express-handlebars')
 const { engine } = require('express-handlebars') // ← измените эту строку
 const app = express()
-const quotes = [
-  "Благословен тот, кто нашел занятие по душе. Не просите Бога о большем благе, чем это. Томас Карлейль",
-  "Не важно, как медленно ты движешься, главное — не останавливайся. Конфуций",
-  "Время — величайший новатор. Фрэнсис Бэкон",
-  "Что же такое время? Пока никто меня о том не спрашивает, я понимаю, нисколько не затрудняясь; но как скоро хочу дать ответ об этом, становлюсь совершенно в тупик. Блаженный Августин",
-  "Время, вынашивая перемены, стремится вперед. Томас Манн"
-]
+
 
 
 // Настройка механизма представлений Handlebars.
@@ -27,17 +22,12 @@ app.set('view engine', 'handlebars')
 
 const port = process.env.PORT||3000
 
-//app.get('/', (req, res) => res.render('home')) старый вариант без случайного выбора цитаты
-
-//app.get('/', (req, res) => {
-
-//const randomQuote = quotes[Math.floor(Math.random()*quotes.length)]
-
-//res.render('home', { quote: randomQuote })
-
-//})
-
 app.get('/', (req, res) => {
+
+res.render('home', { quote: quote.getQuote() } )
+})
+
+/*app.get('/', (req, res) => {
     console.log('=== НАЧАЛО ОБРАБОТКИ / ===');
     console.log('Массив quotes существует?', typeof quotes !== 'undefined');
     console.log('Длина массива quotes:', quotes ? quotes.length : 'массив не определен');
@@ -59,7 +49,7 @@ app.get('/', (req, res) => {
     
     res.render('home', context);
     console.log('=== КОНЕЦ ОБРАБОТКИ / ===');
-});
+});*/
 
 app.get('/about', (req, res) => res.render('about')) 
 
