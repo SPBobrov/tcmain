@@ -12,6 +12,7 @@ p {
 }
 
 body {
+    
     font-family: "Roboto Condensed", sans-serif, Arial, sans-serif; /*попробуем шрифт вызвать локально, не скачивая из сети*/
     max-width: 600px;
     margin: 50px auto;
@@ -55,8 +56,9 @@ h1 {
 }
 
 .main {
+    
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -73,8 +75,11 @@ h1 {
     /*flex-direction: row-reverse; выстраивает содержимое в обратном порядке*/
     /*flex-direction: column; выстраивает содержимое content по вертикали */
     /*justify-content: space-between;*/
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    /*justify-content: space-evenly;*/
+    flex-wrap: wrap; /* свойство флекс-контейнера, nowrap - запрет переноса элементов, wrap - перенос элементов */
+    /*row-gap: 3px;
+    column-gap: 3px;*/
+    gap: 3px 5px; /*сокращенная запис промежутки между строками промежутки между столбцами*/
    }
 
 
@@ -168,19 +173,26 @@ h1 {
 }
 
 .footer {
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   background-color: #5f0dee;
   padding: 20px 40px;
+  justify-content: center;
+  
 }
 
 .footer-author {
-  margin: auto;
+  
+  /*margin: auto;*/
   color: white;
   font-weight: 800;
   font-size: 25px;
-  text-align: center;
+  /*text-align: center;*/
+  
+  
 }
 
 
