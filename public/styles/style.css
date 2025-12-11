@@ -13,7 +13,7 @@ p {
 
 body {
     
-    font-family: "Roboto Condensed", sans-serif, Arial, sans-serif; /*попробуем шрифт вызвать локально, не скачивая из сети*/
+    font-family: "Inter","Roboto Condensed", sans-serif, Arial, sans-serif; /*попробуем шрифт вызвать локально, не скачивая из сети*/
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -29,11 +29,17 @@ nav {
 }
 
 .container {
+    font-family: "EB Garamond";/*,"Roboto Condensed", sans-serif, Arial, sans-serif;*/
+    
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     
+}
+
+.container h1 {
+    font-weight: 700;
 }
 
 h1, h2 {
@@ -46,6 +52,7 @@ h1 {
     font-size: 23px;
 }
 .quote {
+    
     background: white;
     padding: 30px;
     border-radius: 10px;
